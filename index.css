@@ -12,7 +12,7 @@ h1 {
   font-size: 50px;
   font-family: 'BladeRunner';
   letter-spacing: 4px;
-  text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000;
 }
 
 p {
