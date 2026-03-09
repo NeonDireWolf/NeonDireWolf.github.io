@@ -15,6 +15,11 @@ h1 {
   text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
 }
 
+ul {
+  font-size: 15px;
+  font-family: 'BladeRunner';
+}
+
 iframe {
   display: block;
   margin: 0 auto;
