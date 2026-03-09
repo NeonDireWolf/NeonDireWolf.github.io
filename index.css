@@ -9,14 +9,19 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'BladeRunner';
   letter-spacing: 4px;
   text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
 }
 
+p {
+  text-align: center;
+  font-size: 10px
+}
+
 ul {
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'BladeRunner';
 }
 
