@@ -2,6 +2,11 @@ body {
   color: #00FFFF;
 }
 
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
 iframe {
   display: block;
   margin: 0 auto;
