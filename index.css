@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'BladeRunner';
+  src: url('blade_runner.ttf') format('truetype');
+}
+
 body {
   color: #00FFFF;
 }
@@ -5,7 +10,7 @@ body {
 h1 {
   text-align: center;
   font-size: 30px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'BladeRunner', sans-serif;
   letter-spacing: 4px;
   text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
 }
