@@ -10,7 +10,7 @@ iframe {
 }
 
 body {
-  background-image: url('https://nappertime.com/wp-content/uploads/2014/07/blade-runner-cityscape.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url('https://nappertime.com/wp-content/uploads/2014/07/blade-runner-cityscape.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
