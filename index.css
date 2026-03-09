@@ -26,6 +26,18 @@ ul {
   font-family: 'BladeRunner';
 }
 
+.movie-posters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+.movie-posters img {
+  width: 300px;
+  border-radius: 8px;
+}
+
 iframe {
   display: block;
   margin: 0 auto;
