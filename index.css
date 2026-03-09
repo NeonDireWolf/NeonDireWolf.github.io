@@ -34,7 +34,8 @@ ul {
 }
 
 .movie-posters img {
-  width: 300px;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
 }
 
