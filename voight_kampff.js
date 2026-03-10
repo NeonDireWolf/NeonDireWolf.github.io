@@ -60,18 +60,17 @@ function showResults() {
   document.getElementById("result-detail").textContent = detail;
   document.getElementById("final-score").textContent = "Empathy Score: " + score + " / " + questions.length;
 }
-  // Function to reset everything
-  function restartTest() {
-    currentQuestion = 0;
-    score = 0;
-    document.getElementById("test-section").style.display = "block";
-    document.getElementById("result-section").style.display = "none";
-    loadQuestion();
-  }
-  
-  // Loads up the first question when the page starts
-
+// Function to reset everything
+function restartTest() {
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("test-section").style.display = "block";
+  document.getElementById("result-section").style.display = "none";
   loadQuestion();
+}
+  
+// Loads up the first question when the page starts
+loadQuestion();
 
 
 
