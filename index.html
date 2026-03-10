@@ -43,12 +43,38 @@
     <br><br>
       
     <iframe width="1012" height="569" src="https://www.youtube.com/embed/RrkrdYm3HPQ?autoplay=1&mute=1" title="Blade Runner Radio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
+
+    <br><br>
+
+    <div class = "vk-container">
+
+      <h2 class = "vk-title">Voight-Kampff Test</h2>
+      <p class = "vk-subtitle">Empathy Evaluation Protocol - VER. 7.2</p>
+
+      <div id = "test-section">
+        <p id = "question-number" class = "warning"></p>
+        <p id = "question-text" class = "question-text"></p>
+        <div class = "vk-buttons">
+          <button class = "vk-btn" onclick = "answer(true)">Yes</button>
+          <button class = "vk-btn" onclick = "answer(false)">No</button>
+        </div>
+      </div>
+
+      <div id = "result-section" style = "display:none;">
+        <p id = "final-score" class = "vk-subtitle"></p>
+        <div class = "verdict" id = "verdict"></div>
+        <p class = "result-detail" id = "result-detail"></p>
+        <button class = "vk-btn" onclick = "restartTest()">Retest Subject</button>
+      </div>
+    </div>
+ 
   </main>
 
   <footer>
     <p>Created by NeonDireWolf</p>
   </footer>
+
+  <script src = "voight-kampff.js"></script>
   
 </body>
 </html>
