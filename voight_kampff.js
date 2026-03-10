@@ -1,3 +1,4 @@
+
 // The array of questions similar to those on the Voight-Kampff
 const questions = [
   "You see a tortoise lying on its back in the hot sun. Do you help it?",
@@ -30,7 +31,7 @@ function answer(isYes) {
     loadQuestion();
   }
   else {
-    showResult();
+    showResults();
   }
 }
 
@@ -58,17 +59,18 @@ function showResults() {
   document.getElementById("verdict").textContent = verdict;
   document.getElementById("result-detail").textContent = detail;
   document.getElementById("final-score").textContent = "Empathy Score: " + score + " / " + questions.length;
-
+}
   // Function to reset everything
   function restartTest() {
     currentQuestion = 0;
     score = 0;
     document.getElementById("test-section").style.display = "block";
-    document.getElementById("result-section")style.display = "none";
+    document.getElementById("result-section").style.display = "none";
     loadQuestion();
   }
   
   // Loads up the first question when the page starts
+
   loadQuestion();
 
 
