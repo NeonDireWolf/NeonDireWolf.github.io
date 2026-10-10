@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joshua Tippitt | CS 499 ePortfolio</title>
+<style>
+  :root {
+    --bg: #fafaf8;
+    --text: #1f2328;
+    --muted: #5b6370;
+    --line: #e2e2dc;
+    --accent: #b4441c;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --text: #e8e8e4;
+      --muted: #9aa0a8;
+      --line: #2c3036;
+      --accent: #f08a5d;
+      --card: #1d2025;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 Georgia, "Times New Roman", serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 36px; }
+  h1 { font-size: 2.2rem; margin: 0 0 4px; line-height: 1.2; }
+  .sub { color: var(--muted); margin: 0; font-family: system-ui, sans-serif; font-size: 0.95rem; }
+  nav { margin-top: 16px; font-family: system-ui, sans-serif; font-size: 0.9rem; }
+  nav a { margin-right: 16px; }
+  section { margin-top: 52px; }
+  h2 { font-size: 1.4rem; margin: 4px 0 8px; }
+  .label {
+    font-family: system-ui, sans-serif; font-size: 0.75rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent); margin: 0;
+  }
+  a { color: var(--accent); }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+    padding: 20px 22px; margin-top: 14px;
+  }
+  .links { font-family: system-ui, sans-serif; font-size: 0.9rem; margin-top: 14px; }
+  .links a { display: inline-block; margin: 4px 16px 4px 0; }
+  .pending { color: var(--muted); font-style: italic; }
+  footer { margin-top: 64px; color: var(--muted); font-family: system-ui, sans-serif; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Joshua Tippitt</h1>
+  <p class="sub">Computer Science ePortfolio &middot; Southern New Hampshire University &middot; CS 499 Capstone</p>
+  <nav>
+    <a href="#assessment">Self-Assessment</a>
+    <a href="#code-review">Code Review</a>
+    <a href="#software-design">Software Design</a>
+    <a href="#algorithms">Algorithms</a>
+    <a href="#databases">Databases</a>
+  </nav>
+</header>
+
+<section id="assessment">
+  <p class="label">Introduction</p>
+  <h2>Professional Self-Assessment</h2>
+  <p class="pending">Coming soon.</p>
+</section>
+
+<section id="code-review">
+  <p class="label">Code Review</p>
+  <h2>Code Review Video</h2>
+  <p class="pending">Coming soon.</p>
+</section>
+
+<section id="software-design">
+  <p class="label">Enhancement One</p>
+  <h2>Software Design and Engineering</h2>
+  <div class="card">
+    <p><strong>Artifact:</strong> 3D campfire scene in C++ and OpenGL, from CS 330 Computational Graphics and Visualization.</p>
+    <p>I fixed a texture memory leak in DestroyGLTextures(), fixed FindMaterial() so it reports whether it actually found a material, moved repeated key toggle code into a ToggleKeyState() helper, and replaced the repeated drawing blocks in RenderScene() with a SCENE_OBJECT struct and a single loop.</p>
+    <div class="links">
+      <a href="narratives/Narrative_1_Software_Design_and_Engineering.pdf">Read the narrative</a>
+      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS330/original">Original code</a>
+      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS330/enhanced">Enhanced code</a>
+    </div>
+  </div>
+</section>
+
+<section id="algorithms">
+  <p class="label">Enhancement Two</p>
+  <h2>Algorithms and Data Structures</h2>
+  <div class="card">
+    <p><strong>Artifact:</strong> Animal shelter dashboard in Python, Dash, and MongoDB, from CS 340 Client/Server Development.</p>
+    <p>I replaced three separate query variables and an if/elif chain with a single lookup table, and changed the map to look up data by column name instead of column number.</p>
+    <div class="links">
+      <a href="narratives/Narrative_2_Algorithms_and_Data_Structures.pdf">Read the narrative</a>
+      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/original">Original code</a>
+      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/enhanced">Enhanced code</a>
+    </div>
+  </div>
+</section>
+
+<section id="databases">
+  <p class="label">Enhancement Three</p>
+  <h2>Databases</h2>
+  <div class="card">
+    <p><strong>Artifact:</strong> The same CS 340 animal shelter dashboard, focusing on its MongoDB layer.</p>
+    <p>I moved the database credentials out of the code and into environment variables, added an index on animal_type and breed, and blocked update and delete calls that would match every record.</p>
+    <div class="links">
+      <a href="narratives/Narrative_3_Databases.pdf">Read the narrative</a>
+      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/original">Original code</a>
+      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/enhanced">Enhanced code</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  The CS 330 project was built on starter code by Professor Brian Battersby (SNHU). My work is in PrepareScene(), RenderScene(), and the enhancements described above.
+</footer>
+
+</div>
+</body>
+</html>
