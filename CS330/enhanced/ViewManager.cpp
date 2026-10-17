@@ -173,7 +173,7 @@ void ViewManager::Mouse_Scroll_Callback(GLFWwindow* window, double xOffset, doub
  ************************************************************/
 void ViewManager::ToggleKeyState(int key, bool* keyPressedFlag, bool* targetFlag, bool targetValue)
 {
-	if (glfwGetKey(m_pWindow, key) == GLFW_PRESS && !(keyPressedFlag))
+	if (glfwGetKey(m_pWindow, key) == GLFW_PRESS && !(*keyPressedFlag))
 	{
 		*targetFlag = targetValue;
 		*keyPressedFlag = true;
@@ -200,8 +200,8 @@ void ViewManager::ProcessKeyboardEvents()
 
 	// Enhancement
 	// toggle between perspective and orthographic
-	ToggleKeyState(GLFW_KEY_P, &gPKeyPressed, &b0rthographicProjection, false);
-	ToggleKeyState(GLFW_KEY_O, &g0KeyPressed, &b0rthographicProjection, true);
+	ToggleKeyState(GLFW_KEY_P, &gPKeyPressed, &bOrthographicProjection, false);
+	ToggleKeyState(GLFW_KEY_O, &gOKeyPressed, &bOrthographicProjection, true);
 
 	// process camera zooming in and out
 	if (glfwGetKey(m_pWindow, GLFW_KEY_W) == GLFW_PRESS)
