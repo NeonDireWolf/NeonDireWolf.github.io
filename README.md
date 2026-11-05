@@ -1,4 +1,4 @@
-# Joshua Tippitt - CS 499 ePortfolio
+# Joshua Tippitt - Portfolio
 
 Live site: https://neondirewolf.github.io
 
