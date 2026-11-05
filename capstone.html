@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone | Joshua</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo">
+        <p><a href="index.html">&larr; Back</a></p>
+        <h1>College Capstone</h1>
+        <p class="tagline">My final project for my B.S. in Computer Science at SNHU (CS 499). I took two earlier course projects, reviewed them, and improved them. Each enhancement below has a written narrative plus the original and enhanced code.</p>
+        <p><a href="eportfolio.html#assessment">Read my professional self-assessment</a></p>
+
+        <h2>Code Review Video</h2>
+        <p class="section-note">A walkthrough of the original code, the problems I found, and the changes I made.</p>
+        <iframe style="width:100%; aspect-ratio:16/9; border:0; border-radius:8px;" src="https://www.youtube.com/embed/7akahYx0ZeY" title="CS 499 Code Review" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p><a href="https://youtu.be/7akahYx0ZeY">Watch on YouTube</a></p>
+
+        <h2>Enhancement One: Software Design and Engineering</h2>
+        <div class="card featured">
+            <h3>3D Campfire Scene</h3>
+            <p class="tags">C++, OpenGL (from CS 330)</p>
+            <p>I fixed a texture memory leak in DestoryGLTextures(), fixed FindMaterial() so it actually found a material, moved repeated key toggle code into a ToggleKeyState() helper, and replaced the repeated drawing blocks in RenderScene() with a SCENE_OBJECT struct and a single loop.</p>
+            <div class="links">
+                <a href="narratives/Narrative_1_Software_Design_and_Engineering.pdf">Narrative</a>
+                <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS330/original">Original code</a>
+                <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS330/enhanced">Enhanced code</a>
+                <a href="https://github.com/NeonDireWolf/CS330-Comp-Graphic-and-Visualization">Project repo</a>
+            </div>
+        </div>
+
+        <h2>Enhancement Two: Algorithms and Data Structures</h2>
+        <div class="card featured">
+            <h3>Animal Shelter Dashboard</h3>
+            <p class="tags">Python, Dash, MongoDB (from CS 340)</p>
+            <p>I replaced three separate query variables and an if/elif chain with a single lookup table, and changed the map to look up data by column name instead of column number.</p>
+            <div class="links">
+                <a href="narratives/Narrative_2_Algorithms_and_Data_Structures.pdf">Narrative</a>
+                <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/original">Original code</a>
+                <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/enhanced">Enhanced code</a>
+                <a href="https://github.com/NeonDireWolf/CS-340-Project-Two-Dashboard">Project repo</a>
+            </div>
+        </div>
+
+        <h2>Enhancement Three: Databases</h2>
+        <div class="card featured">
+            <h3>Animal Shelter Dashboard (MongoDB layer)</h3>
+            <p class="tags">Python, MongoDB (from CS 340)</p>
+            <p>I moved the database credentials out of the code and into environment variables, added an index on animal_type and breed, and blocked update and delete calls that would match every record.</p>
+            <div class="links">
+                <a href="narratives/Narrative_3_Databases.pdf">Narrative</a>
+                <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/original">Original code</a>
+                <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/enhanced">Enhanced code</a>
+                <a href="https://github.com/NeonDireWolf/CS-340-Project-Two-Dashboard">Project repo</a>
+            </div>
+        </div>
+
+        <footer>
+            The CS 330 project was built on starter code by Professor Brian Battersby (SNHU). My work is in PrepareScene(), RenderScene(), and the enhancements described above.
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+* {box-sizing: bordor-box;}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1f2933;
+    background: #f7f8fa;
+    margin: 0;
+}
+
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 64px;
+}
+
+.topbar {
+    background: #1f2933;
+    color: #fff;
+}
+
+.topbar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+}
+
+.topbar a {color: #fff; text-decoration: none; margin-left: 18px;}
+.topbar a:hover {text-decoration: underline;}
+.topbar .brand {font-weight: 700; margin-left: 0;}
+
+.hero {padding: 48px 0 8px;}
+.hero h1 {margin: 0 0 8px; font-size: 2.2rem;}
+.hero p {max-width: 620px; color: #3e4c59; margin: 0 0 12px;}
+
+h1 {margin: 0 0 4px; font-size: 2rem;}
+h2 {margin: 44px 0 4px;}
+h3 {margin: 0 0 4px;}
+.section-note {color: #52606d; margin: 0 0 16px;}
+
+a {color: #1a5fb4;}
+.tagline {color: #52606d; margin-top: 0;}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #dde1e7;
+    border-radius: 8px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card p {margin: 6px 0;}
+.card .links {margin-top: atuo; padding-top: 10px;}
+.card .links a {margin-right: 14px;}
+
+.featured {border-top: 4px solid #1a5fb4;}
+
+.badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #e3eefb;
+    color: #154c91;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+}
+
+.tags {color: #52606d; font-size: 0.9rem; margin: 2px 0 6px;}
+
+.demo {max-width: 760px; margin: 0 auto; padding: 32px 20px 64px;}
+.demo .card {margin: 14px 0;}
+
+button {
+    font: inherit;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 6px;
+    background: #1a5fb4;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {background: #154c91;}
+
+input[type="text"] {
+    font: inherit;
+    padding: 8px 10px;
+    border: 1px solid #bcc3cd;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 320px;
+}
+
+ul.list {list-style: none; padding: 0;}
+ul.list li {display: flex; gap: 10px; align-items: center; padding: 6px 0;}
+ul.list li.done span {text-decoration: line-through; color: #8a94a0;}
+ul.list li span {flex: 1;}
+
+footer {margin-top: 56px; color: #52606d; font-size: 0.9rem;}

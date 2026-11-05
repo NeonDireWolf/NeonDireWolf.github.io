@@ -55,18 +55,12 @@
 </head>
 <body>
 <div class="wrap">
+  <p><a href="capstone.html">&larr; Back to capstone</a></p>
 
 <header>
   <h1>Joshua Tippitt</h1>
   <p class="sub">Computer Science ePortfolio &middot; Southern New Hampshire University &middot; CS 499 Capstone</p>
   <p class="contact"><a href="https://www.linkedin.com/in/joshtippitt/" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/NeonDireWolf" target="_blank" rel="noopener">GitHub</a></p>
-  <nav>
-    <a href="#assessment">Self-Assessment</a>
-    <a href="#code-review">Code Review</a>
-    <a href="#software-design">Software Design</a>
-    <a href="#algorithms">Algorithms</a>
-    <a href="#databases">Databases</a>
-  </nav>
 </header>
 
 <section id="assessment">
@@ -78,62 +72,9 @@
   <p>For data structures and algorithms, my clearest example is my CS 340 animal shelter dashboard. The original code picked a rescue filter with a chain of if and elif statements and looked up map data by column number. I replaced the chain with a dictionary lookup table, which takes constant time and makes adding a new filter a one-line change, and switched the map to look up data by column name so it would not break if the data changed. In my CS 330 project I replaced about 250 lines of repeated drawing code with a struct and a single loop. Both changes taught me that choosing the right data structure is as much about making code easy to change as it is about speed.</p>
   <p>In software engineering and databases, I have worked across the full stack. I built a MEAN stack app in CS 465, an Android app with a SQLite database in CS 360, and a Python dashboard backed by MongoDB in CS 340. For my capstone database enhancement, I added an index on the fields the dashboard searches most and added safeguards to the update and delete methods. In my software design enhancement, I found and fixed two real bugs in my CS 330 graphics project: a texture cleanup function that leaked GPU memory, and a search function that always reported success even when it found nothing.</p>
   <p>Security is the area where this program changed my thinking the most. My original CS 340 dashboard had the database username and password typed right into the code, and the repository was public. In my capstone I moved those credentials into environment variables and blocked update and delete calls that would match every record in the database. I also learned that removing a password from the code does not remove it from the project&#x27;s Git history, so the real fix in a production setting is to change the password. I now look at code by asking how it could be misused or break, not just whether it works.</p>
-  <p>The three artifacts in this ePortfolio show those skills working together. The first is my CS 330 OpenGL campfire scene, enhanced for software design and engineering. I fixed a memory leak and a broken search function, moved repeated input code into a helper method, and refactored the rendering code to use a struct and a loop. The second and third come from my CS 340 animal shelter dashboard. For algorithms and data structures, I replaced the filtering logic with a lookup table and made the map lookups safer. For databases, I secured the credentials, added an index, and protected against accidental mass updates and deletes. Together they show that I can step into an existing codebase, find what is wrong or fragile, and improve it in a way that is safe, maintainable, and clearly explained. Each artifact below includes the original code, the enhanced code, and a narrative explaining what I changed and why.</p>
+  <p>The three artifacts in this ePortfolio show those skills working together. The first is my CS 330 OpenGL campfire scene, enhanced for software design and engineering. I fixed a memory leak and a broken search function, moved repeated input code into a helper method, and refactored the rendering code to use a struct and a loop. The second and third come from my CS 340 animal shelter dashboard. For algorithms and data structures, I replaced the filtering logic with a lookup table and made the map lookups safer. For databases, I secured the credentials, added an index, and protected against accidental mass updates and deletes. Together they show that I can step into an existing codebase, find what is wrong or fragile, and improve it in a way that is safe, maintainable, and clearly explained. Each artifact on my <a href="capstone.html">capstone page</a> includes the original code, the enhanced code, and a narrative explaining what I changed and why.</p>
 </section>
 
-<section id="code-review">
-  <p class="label">Code Review</p>
-  <h2>Code Review Video</h2>
-  <p>A walkthrough of the original code for each artifact, the problems I found, and the enhancements I made.</p>
-  <div class="video"><iframe src="https://www.youtube.com/embed/7akahYx0ZeY" title="CS 499 Code Review" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-  <p class="links"><a href="https://youtu.be/7akahYx0ZeY" target="_blank" rel="noopener">Watch on YouTube</a></p>
-</section>
-
-<section id="software-design">
-  <p class="label">Enhancement One</p>
-  <h2>Software Design and Engineering</h2>
-  <div class="card">
-    <p><strong>Artifact:</strong> 3D campfire scene in C++ and OpenGL, from CS 330 Computational Graphics and Visualization.</p>
-    <p>I fixed a texture memory leak in DestroyGLTextures(), fixed FindMaterial() so it reports whether it actually found a material, moved repeated key toggle code into a ToggleKeyState() helper, and replaced the repeated drawing blocks in RenderScene() with a SCENE_OBJECT struct and a single loop.</p>
-    <div class="links">
-      <a href="narratives/Narrative_1_Software_Design_and_Engineering.pdf">Read the narrative</a>
-      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS330/original">Original code</a>
-      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS330/enhanced">Enhanced code</a>
-    </div>
-  </div>
-</section>
-
-<section id="algorithms">
-  <p class="label">Enhancement Two</p>
-  <h2>Algorithms and Data Structures</h2>
-  <div class="card">
-    <p><strong>Artifact:</strong> Animal shelter dashboard in Python, Dash, and MongoDB, from CS 340 Client/Server Development.</p>
-    <p>I replaced three separate query variables and an if/elif chain with a single lookup table, and changed the map to look up data by column name instead of column number.</p>
-    <div class="links">
-      <a href="narratives/Narrative_2_Algorithms_and_Data_Structures.pdf">Read the narrative</a>
-      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/original">Original code</a>
-      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/enhanced">Enhanced code</a>
-    </div>
-  </div>
-</section>
-
-<section id="databases">
-  <p class="label">Enhancement Three</p>
-  <h2>Databases</h2>
-  <div class="card">
-    <p><strong>Artifact:</strong> The same CS 340 animal shelter dashboard, focusing on its MongoDB layer.</p>
-    <p>I moved the database credentials out of the code and into environment variables, added an index on animal_type and breed, and blocked update and delete calls that would match every record.</p>
-    <div class="links">
-      <a href="narratives/Narrative_3_Databases.pdf">Read the narrative</a>
-      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/original">Original code</a>
-      <a href="https://github.com/NeonDireWolf/NeonDireWolf.github.io/tree/main/CS340/enhanced">Enhanced code</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  The CS 330 project was built on starter code by Professor Brian Battersby (SNHU). My work is in PrepareScene(), RenderScene(), and the enhancements described above.
-</footer>
 
 </div>
 </body>

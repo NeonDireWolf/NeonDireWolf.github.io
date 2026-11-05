@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Lookup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo">
+        <p><a href="index.html">&larr; Back</a></p>
+        <h1>Weather Lookup</h1>
+        <p class="tagline">Uses the free Open-Meteo APIs, no key needed.</p>
+
+        <form id="form">
+            <input type="text" id="city" placeholder="Enter a city" required>
+            <button type="submit">Look up</button>
+        </form>
+
+        <div class="card" id="result" hidden></div>
+    </div>
+
+    <script>
+        const form = document.getElementById("form");
+        const cityInput = document.getElementById("city");
+        const result = document.getElementById("result");
+
+        function describeWeather(code) {
+            if (code === 0) return "Clear";
+            if (code === 1 || code === 2) return "Partly cloudy";   
+            if (code === 3) return "Cloudy";
+            if (code === 45 || code === 48) return "Foggy";
+            if (code >= 51 && code <= 67) return "Rainy";      
+            if (code >= 71 && code <= 77) return "Snowy";
+            if (code >= 80 && code <= 82) return "Rain showers";
+            if (code === 85 || code === 86) return "Snow showers";
+            if (code >= 95) return "Thunderstorms";
+            return "Unknown";
+        }
+        
+        form.addEventListener("submit", async(event) => {
+            event.preventDefault();
+
+            const city = cityInput.value.trim();
+
+            result.hidden = false;
+            result.textContent = "Loading...";
+
+            try {
+                const geoUrl = "https://geocoding-api.open-meteo.com/v1/search?count=1&name=" + encodeURIComponent(city);
+                const geoRes = await fetch(geoUrl);
+                const geoData = await geoRes.json();
+
+                if (!geoData.results || geoData.results.length === 0) {
+                    result.textContent = "No match found for that city.";
+                    return;
+                }
+
+                const place = geoData.results[0];
+
+                const wxUrl = "https://api.open-meteo.com/v1/forecast"
+                    + "?latitude=" + place.latitude
+                    + "&longitude=" + place.longitude
+                    + "&current=temperature_2m,wind_speed_10m,weather_code"
+                    + "&daily=precipitation_probability_max"
+                    + "&timezone=auto"
+                    + "&temperature_unit=fahrenheit&wind_speed_unit=mph";
+                const wxRes = await fetch(wxUrl);
+                const wxData = await wxRes.json();
+
+                const temp = wxData.current.temperature_2m;
+                const wind = wxData.current.wind_speed_10m;
+                const condition = describeWeather(wxData.current.weather_code);
+                const rainChance = wxData.daily.precipitation_probability_max[0];
+
+                const region = place.admin1 ? ", " + place.admin1 : "";
+
+                result.innerHTML = "<h3>" + place.name + region + "</h3>"
+                    + "<p>" + condition + "<br>" 
+                    + "Temperature: " + temp + " &deg;F<br>"
+                    + "Chance of rain: " + rainChance + "%<br>" 
+                    + "Wind: " + wind + " mph</p>";
+            } catch (err) {
+                results.textContent = "Something went wrong. Try again in a moment.";
+            }
+        });
+    </script>
+</body>
+</html>
